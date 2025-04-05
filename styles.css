@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 .logo{
     color: #ff9800;
     font-weight: bold;
@@ -63,7 +66,7 @@ body{
 
 }
 .home-content p{
-    font-size: 10px;
+    font-size: 14px;
 }
 .about-container{
     display: flex;
@@ -161,9 +164,7 @@ section{
     padding: 80px 20px;
     min-height: 100vh;
 }
-html{
-    scroll-behavior: smooth;
-}
+
 .Contact{
     text-align: center;
     padding: 50px;
@@ -198,3 +199,47 @@ button{
 button:hover{
     background-color: #e65c00;
 }
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+@media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .home-content {
+      max-width: 100%;
+    }
+  
+    .profile-pic {
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      margin: 10px 0;
+    }
+  
+    .projects-container {
+      padding: 0 10px;
+    }
+  }
